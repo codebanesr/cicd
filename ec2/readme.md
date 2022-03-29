@@ -1,3 +1,17 @@
+## Generating ssh keys [https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent]
+Open Terminal.
+    `mkdir -p ~/.ssh/ec2s && cd ~/.ssh/ec2s`
+    `ssh-keygen -t ed25519 -C "your_email@example.com"`
+        > Note: If you are using a legacy system that doesn't support the Ed25519 algorithm, use:
+        >$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+    
+    Provide a ${filename} when prompted *
+    `eval "$(ssh-agent -s)"`
+
+    `ssh-add ~/.ssh/${filename}`
+
+
+
 ## Refer api docs for ec2 pulumi here
 https://www.pulumi.com/registry/packages/aws/api-docs/ec2/instance/
 

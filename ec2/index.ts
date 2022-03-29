@@ -26,7 +26,10 @@ const server = new aws.ec2.Instance("webserver-www", {
     instanceType: size,
     vpcSecurityGroupIds: [group.id], // reference the security group resource above
     ami: ami.id,
-    keyName: deployer.keyName
+    keyName: deployer.keyName,
+    tags: {
+        Name: "DemoInstance",
+    },
 });
 
 export const publicIp = server.publicIp;

@@ -22,6 +22,10 @@ https://www.pulumi.com/registry/packages/aws/api-docs/ec2/instance/
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+
+
+## Ubuntu image location can be found from the marketplace
+## https://ap-south-1.console.aws.amazon.com/ec2/v2/home?region=ap-south-1#Images:visibility=public-images;v=3
 const ubuntu = aws.ec2.getAmi({
     mostRecent: true,
     filters: [

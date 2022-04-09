@@ -1,0 +1,3 @@
+name: ecs_anywhere
+runtime: nodejs
+description: A minimal AWS TypeScript Pulumi program
